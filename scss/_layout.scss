@@ -3,8 +3,8 @@ html {
 }
 
 section.section{
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
     @include desktop{
-        padding: 2rem 0;
+        padding: 1.5rem 0;
     }
 }

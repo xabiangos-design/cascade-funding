@@ -53,6 +53,7 @@
     @include font-title-strong;
     font-size: 1.6rem;
     color: $dark;
+    line-height: 135%;
     @include tablet{
       font-size: 2.4rem;
       letter-spacing: -1px;

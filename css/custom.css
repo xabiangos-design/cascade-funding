@@ -5064,7 +5064,8 @@ h1 {
   font-weight: 600;
   font-style: normal;
   font-size: 1.6rem;
-  color: #363854; }
+  color: #363854;
+  line-height: 135%; }
   @media screen and (min-width: 769px), print {
     h1 {
       font-size: 2.4rem;
@@ -5074,10 +5075,10 @@ html {
   scroll-behavior: smooth; }
 
 section.section {
-  padding: 2rem 1rem; }
+  padding: 1.5rem 1rem; }
   @media screen and (min-width: 1024px) {
     section.section {
-      padding: 2rem 0; } }
+      padding: 1.5rem 0; } }
 
 .button {
   border-radius: .5rem; }
@@ -5364,8 +5365,7 @@ section.section.bg-gray .card-promocion:hover {
     .call-card {
       height: 100%; }
       .call-card .buttons {
-        margin-top: auto;
-        align-self: flex-end; } }
+        margin-top: auto; } }
 
 .is-checkradio[type="radio"],
 .is-checkradio[type="checkbox"] {
