@@ -29,10 +29,18 @@
     .field{
         margin-bottom: 1rem;
     }
-    img{
+    figure{
+        background-color: $gray-bg;
+        @include radius-sm;
+        display: flex;
+        align-items: center;
         margin-bottom: 1rem;
-        border-bottom: 1px solid $gray-border;
-        padding-bottom: .75rem;
+    }
+    img{
+        mix-blend-mode: multiply;
+        max-width: 70%;
+        margin: 0 auto;
+
     }
     .tags{
         overflow: auto;
