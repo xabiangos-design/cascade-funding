@@ -1,0 +1,66 @@
+:root {
+accent-color: $primary;
+}
+
+*:focus{
+outline: none;
+}
+
+//Select
+.select, .select:not(.is-multiple):not(.is-loading)::after{
+    border-color: $dark;
+    border-width: 1px;
+    border-radius: 0;
+}
+
+
+
+//select over ride
+.select:not(.is-multiple):not(.is-loading)::after, .navbar-link:not(.is-arrowless)::after{
+    border-color: $dark;
+    border-width: 1px;
+    border-radius: 0;
+}
+
+// Form contacto
+form.form-contacto{
+    label{
+        color: $white;
+        @include font-regular;
+    }
+    .field{
+        margin-bottom: 1.2rem;
+        &.is-checkbox{
+            margin-top: 2rem;
+            a{
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.captcha{
+    background-color: rgba($white,.2);
+    padding: 1.5rem;
+}
+
+.input, .textare, .select select{
+    box-shadow: none;
+    @include radius-sm;
+}
+
+//Plugin Forn 7
+
+input.input.wpcf7-not-valid{
+    border: 2px solid $primary;
+}
+
+.wpcf7-not-valid-tip{
+    color: $primary;
+    background-color: $primary-light;
+    padding: 1rem;
+}

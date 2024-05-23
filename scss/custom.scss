@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+
+//colors
+$primary: #0C14D9;
+$primary-dark:#070cb0;
+$primary-light: #C5C8FC;
+$secondary:#1ECF7A;
+$secondary-dark:#26B56E;
+$dark:#363854;
+$darker:#1e1f2f;
+$gray-dark:#57586a;
+$gray:#B8B9D1;
+$gray-medium:#dddddd;
+$gray-bg:#f5f5f5;
+$white:#ffffff;
+$bg-primary-light:#F5F6FE;
+$bg-secondary-light:#DBFAEB;
+$danger: #ED4E4E;
+$gray-border: $gray-medium;
+$link-active:$primary;
+$link-focus:$primary-dark;
+$link: $primary;
+
+//font-weights
+$extra-bold:800;
+$bold:700;
+$semi-bold:600;
+$regular:400;
+$light:300;
+
+//font-family
+$title:'Poppins', sans-serif;
+$sans:'DM Sans', sans-serif;
+
+//Mixins
+@mixin radius-section{
+    border-radius: 20px;
+	@include tablet{
+        border-radius: 3vw;
+    }
+}
+
+@mixin radius-pic{
+    border-radius: 16px;
+	@include tablet{
+        border-radius: 1.5vw;
+    }
+}
+
+@mixin radius-card{
+    border-radius: 12px;
+	@include tablet{
+        border-radius: 1vw;
+    }
+}
+
+//Tabs
+$tabs-link-active-color:$primary;
+$tabs-link-active-border-bottom-color:$primary;
+$tabs-link-padding:1em;
+
+//Pagination
+// $pagination-color:$dark;
+// $pagination-current-background-color:$primary-dark;
+
+
+
+//Padding
+$spacing-sm:.5rem;
+$spacing-md:1rem;
+$spacing-lg:2rem;
+$spacing-xl:4rem;
+
+//Font-weight
+// $regular:400;
+// $semi-bold:500;
+// $bold:700;
+
+//Font-size
+$font-size-xs:.65rem;
+$font-size-sm:.875rem;
+$font-size-md:1rem;
+$font-size-lg:1.2rem;
+$font-size-xl:3rem;
+
+
+
+
+//Mixins
+@mixin radius-xs{
+    border-radius: .25rem;
+}
+
+@mixin radius-sm{
+    border-radius: .5rem;
+}
+
+@mixin radius-md{
+    border-radius: 1rem;
+}
+
+@mixin radius-lg{
+    border-radius: 1rem;
+    @include desktop{
+        border-radius: 2rem;
+    }
+}
+
+@mixin transition{
+    transition: all .3s ease-in-out;
+}
+
+@mixin box-shadow{
+    -webkit-box-shadow: 0px 0px 26px -8px rgba(102,102,102,0.35);
+-moz-box-shadow: 0px 0px 26px -8px rgba(102,102,102,0.35);
+box-shadow: 0px 0px 26px -8px rgba(102,102,102,0.35);
+}
+
+
+//Bulma stuff
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/tag.sass";
+@import "../node_modules/bulma/sass/helpers/_all.sass";
+@import "../node_modules/bulma/sass/form/_all";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/components/tabs.sass";
+@import "../node_modules/bulma/sass/components/pagination.sass";
+// @import "../node_modules/bulma/sass/components/modal.sass";
+// @import "../node_modules/bulma/sass/components/menu.sass";
+// @import "../node_modules/bulma/sass/elements/table.sass";
+// @import "../node_modules/bulma/sass/elements/progress.sass";
+// @import "../node_modules/bulma/sass/components/dropdown.sass";
+// @import "../node_modules/bulma/sass/components/breadcrumb.sass";
+// @import "../node_modules/bulma/sass/components/navbar.sass";
+
+//Custom
+@import "typography.scss";
+@import "layout.scss";
+@import "buttons.scss";
+@import "cards.scss";
+@import "components.scss";
+@import "bulma-checkradio.sass";
+@import "forms.scss";
+@import "colors.scss";

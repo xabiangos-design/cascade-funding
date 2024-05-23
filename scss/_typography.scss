@@ -1,0 +1,60 @@
+// Imports
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+@mixin font-regular {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  }
+
+  @mixin font-bold {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    }
+  
+  @mixin  font-title-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @mixin font-title-strong {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  
+
+  body{
+    font-size: $font-size-md;
+    color: $dark;
+    line-height: 125%;
+    color: $gray-dark;
+    @include font-regular;
+  }
+
+  a{
+    text-decoration: none;
+    @include transition;
+    &.is-primary{
+        color: $primary;
+        &:hover, &:active{
+            color: $primary-dark;
+        }
+    }
+  }
+
+  h1{
+    @include font-title-strong;
+    font-size: 1.6rem;
+    color: $dark;
+    @include tablet{
+      font-size: 2.4rem;
+      letter-spacing: -1px;
+    }
+  }
