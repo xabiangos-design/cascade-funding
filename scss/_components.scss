@@ -19,12 +19,9 @@
         color: $gray-dark;
         text-transform: uppercase;
         font-size: $font-size-xs;
-        font-weight: $bold;
+        @include font-bold;
         letter-spacing: 2px;
         margin-bottom: .25rem;
-    }
-    p{
-        font-size: $font-size-sm;
     }
     .field{
         margin-bottom: 1rem;
@@ -34,12 +31,14 @@
         @include radius-sm;
         display: flex;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
     img{
         mix-blend-mode: multiply;
+        margin: .2rem auto;
+        object-fit: contain;
+        aspect-ratio: 16 / 9;
         max-width: 70%;
-        margin: 0 auto;
 
     }
     .tags{
