@@ -13,4 +13,16 @@ section.section{
     @include desktop{
         padding: 1.5rem 0;
     }
+    &.bg-light{
+        background-color: $gray-bg;
+        @include desktop{
+            padding-top: 3rem;
+        }
+    }
+}
+
+.columns.row-reverse{
+    @include desktop{
+        flex-direction: row-reverse;
+    }
 }

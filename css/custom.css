@@ -5044,7 +5044,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 body {
   font-size: 1rem;
   color: #363854;
-  line-height: 125%;
+  line-height: 130%;
   color: #57586a;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
@@ -5068,8 +5068,23 @@ h1 {
   line-height: 135%; }
   @media screen and (min-width: 769px), print {
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       letter-spacing: -1px; } }
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.2rem;
+  color: #363854;
+  line-height: 135%; }
+  @media screen and (min-width: 769px), print {
+    h2 {
+      font-size: 1.4rem; } }
+
+@media screen and (min-width: 769px), print {
+  h2.is-tagline {
+    font-size: 1.2rem; } }
 
 html {
   scroll-behavior: smooth; }
@@ -5083,6 +5098,15 @@ section.section {
   @media screen and (min-width: 1024px) {
     section.section {
       padding: 1.5rem 0; } }
+  section.section.bg-light {
+    background-color: #f5f5f5; }
+    @media screen and (min-width: 1024px) {
+      section.section.bg-light {
+        padding-top: 3rem; } }
+
+@media screen and (min-width: 1024px) {
+  .columns.row-reverse {
+    flex-direction: row-reverse; } }
 
 .button {
   border-radius: .5rem; }
@@ -5245,42 +5269,62 @@ form.form-contacto .field {
     font-style: normal;
     font-size: 1.2rem;
     margin-bottom: 1.5rem; }
-  .call-card h4 {
-    color: #363854;
-    text-transform: uppercase;
-    font-size: 0.65rem;
-    font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600 !important;
-    font-style: normal;
-    letter-spacing: 2px;
-    margin-bottom: .25rem; }
-  .call-card .field {
-    margin-bottom: 1rem; }
-  .call-card figure {
-    background-color: #f5f5f5;
-    border-radius: .5rem;
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem; }
-  .call-card img {
-    mix-blend-mode: multiply;
-    margin: .2rem auto;
-    object-fit: contain;
-    aspect-ratio: 16 / 9;
-    max-width: 70%; }
-  .call-card .tags {
-    overflow: auto;
-    white-space: nowrap;
-    flex-wrap: nowrap;
-    gap: .5rem; }
-    .call-card .tags a.tag {
-      font-size: 0.875rem; }
-      .call-card .tags a.tag:hover, .call-card .tags a.tag:active {
-        text-decoration: none;
-        color: #1e1f2f; }
   @media screen and (min-width: 769px), print {
     .call-card {
       height: 100%; }
       .call-card .buttons {
         margin-top: auto; } }
+
+.call-detail h1 {
+  margin-bottom: 1rem; }
+
+.call-detail h2.is-tagline {
+  margin-bottom: 1rem;
+  color: #57586a; }
+  @media screen and (min-width: 1024px) {
+    .call-detail h2.is-tagline {
+      max-width: 80%; } }
+
+figure.call-logo {
+  background-color: #f5f5f5;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem; }
+
+img {
+  mix-blend-mode: multiply;
+  margin: .2rem auto;
+  object-fit: contain;
+  aspect-ratio: 16 / 9;
+  max-width: 70%; }
+
+.tags {
+  overflow: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  gap: .5rem; }
+  .tags a.tag {
+    transition: all .3s ease-in-out;
+    font-size: 0.875rem; }
+    .tags a.tag:hover, .tags a.tag:active {
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #363854; }
+
+h4 {
+  color: #363854;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600 !important;
+  font-style: normal;
+  letter-spacing: 2px;
+  margin-bottom: .25rem; }
+
+.field {
+  margin-bottom: 1rem; }
+
+.related-calls {
+  margin-top: 2rem; }

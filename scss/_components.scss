@@ -1,3 +1,4 @@
+//Card
 .call-card{
     @include radius-card;
     border: 1px solid $gray-border;
@@ -12,49 +13,76 @@
         font-size: $font-size-lg;
         margin-bottom: 1.5rem;
     }
-    h4{
-        color: $dark;
-        text-transform: uppercase;
-        font-size: $font-size-xs;
-        @include font-bold;
-        letter-spacing: 2px;
-        margin-bottom: .25rem;
-    }
-    .field{
-        margin-bottom: 1rem;
-    }
-    figure{
-        background-color: $gray-bg;
-        @include radius-sm;
-        display: flex;
-        align-items: center;
-        margin-bottom: 1.5rem;
-    }
-    img{
-        mix-blend-mode: multiply;
-        margin: .2rem auto;
-        object-fit: contain;
-        aspect-ratio: 16 / 9;
-        max-width: 70%;
-
-    }
-    .tags{
-        overflow: auto;
-        white-space: nowrap;
-        flex-wrap: nowrap;
-        gap: .5rem;
-        a.tag{
-            font-size: $font-size-sm;
-            &:hover, &:active{
-                text-decoration: none;
-                color: $darker;
-            }
-        }
-    }
+   
+    
     @include tablet{
         height: 100%;
         .buttons{
             margin-top: auto;
         }
     }
+}
+
+//Detal
+.call-detail{
+    h1{
+        margin-bottom:1rem;
+    }
+    h2.is-tagline{
+        margin-bottom: 1rem;
+        color: $gray-dark;
+        @include desktop{
+            max-width: 80%;
+        }
+    }
+}
+
+//Common components
+figure.call-logo{
+    background-color: $gray-bg;
+    @include radius-sm;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+img{
+    mix-blend-mode: multiply;
+    margin: .2rem auto;
+    object-fit: contain;
+    aspect-ratio: 16 / 9;
+    max-width: 70%;
+}
+
+.tags{
+    overflow: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    gap: .5rem;
+    a.tag{
+        @include transition;
+        font-size: $font-size-sm;
+        &:hover, &:active{
+            text-decoration: none;
+            color: $white;
+            background-color: $dark;
+        }
+    }
+}
+
+h4{
+    color: $dark;
+    text-transform: uppercase;
+    font-size: $font-size-xs;
+    @include font-bold;
+    letter-spacing: 2px;
+    margin-bottom: .25rem;
+}
+
+.field{
+    margin-bottom: 1rem;
+}
+
+.related-calls{
+    margin-top: 2rem;
 }
