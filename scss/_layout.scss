@@ -2,22 +2,19 @@ html {
     scroll-behavior: smooth;
 }
 
-main.main{
-   @include mobile{
-    background-color: $gray-bg;
-   }
-}
-
 section.section{
-    padding: 1.5rem 1rem;
+    padding: 1rem 1rem;
     @include desktop{
-        padding: 1.5rem 0;
+        padding: .5rem 0;
     }
     &.bg-light{
         background-color: $gray-bg;
-        @include desktop{
-            padding-top: 3rem;
-        }
+        padding-top: 3rem;
+    }
+    &.bg-light-mobile{
+        @include mobile{
+            background-color: $gray-bg;
+           }
     }
 }
 

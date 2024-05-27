@@ -5089,20 +5089,17 @@ h2 {
 html {
   scroll-behavior: smooth; }
 
-@media screen and (max-width: 768px) {
-  main.main {
-    background-color: #f5f5f5; } }
-
 section.section {
-  padding: 1.5rem 1rem; }
+  padding: 1rem 1rem; }
   @media screen and (min-width: 1024px) {
     section.section {
-      padding: 1.5rem 0; } }
+      padding: .5rem 0; } }
   section.section.bg-light {
-    background-color: #f5f5f5; }
-    @media screen and (min-width: 1024px) {
-      section.section.bg-light {
-        padding-top: 3rem; } }
+    background-color: #f5f5f5;
+    padding-top: 3rem; }
+  @media screen and (max-width: 768px) {
+    section.section.bg-light-mobile {
+      background-color: #f5f5f5; } }
 
 @media screen and (min-width: 1024px) {
   .columns.row-reverse {
@@ -5127,6 +5124,10 @@ section.section {
     color: #ffffff; }
     .button.is-outline-white:active, .button.is-outline-white:hover {
       opacity: .8; }
+
+.button.is-small:not(.is-rounded) {
+  border-radius: 4px;
+  font-size: 0.85rem; }
 
 :root {
   accent-color: #0C14D9; }
@@ -5274,16 +5275,42 @@ form.form-contacto .field {
       height: 100%; }
       .call-card .buttons {
         margin-top: auto; } }
+  .call-card .tags {
+    overflow: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    gap: .5rem;
+    margin-bottom: 1.5rem; }
+    .call-card .tags:last-child {
+      margin-bottom: 0; }
+  .call-card .field {
+    margin-bottom: 1rem; }
 
-.call-detail h1 {
-  margin-bottom: 1rem; }
-
-.call-detail h2.is-tagline {
-  margin-bottom: 1rem;
-  color: #57586a; }
-  @media screen and (min-width: 1024px) {
-    .call-detail h2.is-tagline {
-      max-width: 80%; } }
+.section.call-detail {
+  padding-bottom: 3rem; }
+  .section.call-detail h1 {
+    margin-bottom: 1rem; }
+  .section.call-detail h2.is-tagline {
+    margin-bottom: 1rem;
+    color: #57586a; }
+    @media screen and (min-width: 1024px) {
+      .section.call-detail h2.is-tagline {
+        max-width: 80%; } }
+  .section.call-detail .field:not(:last-of-type) {
+    margin-bottom: 1.5rem; }
+  .section.call-detail .button-cta {
+    border-top: 1px solid #dddddd;
+    padding-top: 1.5rem; }
+    @media screen and (max-width: 768px) {
+      .section.call-detail .button-cta .button {
+        width: 100%; } }
+  .section.call-detail .tags {
+    margin-bottom: 1rem; }
+    @media screen and (min-width: 1024px) {
+      .section.call-detail .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem; } }
 
 figure.call-logo {
   background-color: #f5f5f5;
@@ -5291,31 +5318,35 @@ figure.call-logo {
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem; }
-
-img {
-  mix-blend-mode: multiply;
-  margin: .2rem auto;
-  object-fit: contain;
-  aspect-ratio: 16 / 9;
-  max-width: 70%; }
+  figure.call-logo img {
+    mix-blend-mode: multiply;
+    margin: .2rem auto;
+    object-fit: contain;
+    aspect-ratio: 16 / 9;
+    max-width: 70%; }
+    @media screen and (min-width: 1024px) {
+      figure.call-logo img {
+        max-width: 50%; } }
+    @media screen and (min-width: 1216px) {
+      figure.call-logo img {
+        max-width: 40%; } }
 
 .tags {
-  overflow: auto;
-  white-space: nowrap;
-  flex-wrap: nowrap;
   gap: .5rem; }
-  .tags a.tag {
-    transition: all .3s ease-in-out;
-    font-size: 0.875rem; }
-    .tags a.tag:hover, .tags a.tag:active {
-      text-decoration: none;
-      color: #ffffff;
-      background-color: #363854; }
+
+.tags a.tag {
+  transition: all .3s ease-in-out;
+  font-size: 0.85rem;
+  margin-bottom: 0; }
+  .tags a.tag:hover, .tags a.tag:active {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #363854; }
 
 h4 {
   color: #363854;
   text-transform: uppercase;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600 !important;
@@ -5323,8 +5354,11 @@ h4 {
   letter-spacing: 2px;
   margin-bottom: .25rem; }
 
-.field {
-  margin-bottom: 1rem; }
-
 .related-calls {
   margin-top: 2rem; }
+
+.back-link {
+  margin-bottom: 1.5rem; }
+  @media screen and (min-width: 769px), print {
+    .back-link {
+      margin-bottom: 2rem; } }

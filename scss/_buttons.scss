@@ -26,3 +26,8 @@
         }
     }
 }
+
+.button.is-small:not(.is-rounded) {
+    border-radius: 4px;
+    font-size: $font-size-sm;
+}

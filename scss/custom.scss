@@ -73,8 +73,8 @@ $spacing-lg:2rem;
 $spacing-xl:4rem;
 
 //Font-size
-$font-size-xs:.65rem;
-$font-size-sm:.875rem;
+$font-size-xs:.75rem;
+$font-size-sm:.85rem;
 $font-size-md:1rem;
 $font-size-lg:1.2rem;
 $font-size-xl:3rem;
@@ -124,9 +124,9 @@ box-shadow: 0px 0px 26px -8px rgba(102,102,102,0.35);
 @import "../node_modules/bulma/sass/elements/button.sass";
 @import "../node_modules/bulma/sass/components/tabs.sass";
 @import "../node_modules/bulma/sass/components/pagination.sass";
+// @import "../node_modules/bulma/sass/elements/table.sass";
 // @import "../node_modules/bulma/sass/components/modal.sass";
 // @import "../node_modules/bulma/sass/components/menu.sass";
-// @import "../node_modules/bulma/sass/elements/table.sass";
 // @import "../node_modules/bulma/sass/elements/progress.sass";
 // @import "../node_modules/bulma/sass/components/dropdown.sass";
 // @import "../node_modules/bulma/sass/components/breadcrumb.sass";
@@ -139,4 +139,3 @@ box-shadow: 0px 0px 26px -8px rgba(102,102,102,0.35);
 @import "forms.scss";
 @import "colors.scss";
 @import "components.scss";
-// @import "bulma-checkradio.sass";
